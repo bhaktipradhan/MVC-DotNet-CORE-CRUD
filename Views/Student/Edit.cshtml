@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model studentsMVC.Models.Entities.Student
+
+<h1>Students</h1>
+
+<form method="post">
+    <div class="ms-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name" />
+    </div>
+    <div class="ms-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email" />
+    </div>
+    <div class="ms-3">
+        <label class="form-label">Phone</label>
+        <input type="text" class="form-control" asp-for="Phone" />
+    </div>
+    <div class="ms-3">
+        <input id="Subscribed" type="checkbox" class="form-check-input" asp-for="Subscribed">
+        <label for="Subscribed" class="form-check-label">Subscribed</label>
+    </div>
+    <div class="ms-3">
+        <input type="submit" value="Update" class="btn btn-primary" />
+        <button type="submit" class="btn btn-danger" asp-controller="Student" asp-action="Delete">Delete</button>
+    </div>
+</form>
